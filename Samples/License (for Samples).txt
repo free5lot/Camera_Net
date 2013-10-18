@@ -1,0 +1,32 @@
+==========================================
+Short story:
+==========================================
+Samples CameraControlSample and CameraControlTool
+of CameraControl usage are PUBLIC DOMAIN.
+
+Library Camera_NET is under terms of LGPL 3.0 or newer.
+
+Library DirectShowLib is under terms of LGPL 2.1 or newer.
+==========================================
+
+
+==========================================
+Long story:
+==========================================
+There are two samples of CameraControl usage:
+CameraControlSample - is a simple one (camera and resolution change).
+CameraControlTool - is a complicated one (+zooming, snapshots and etc).
+
+While the Camera_Net library is covered by LGPL, 
+these samples are released as PUBLIC DOMAIN.
+So, you can use code from these samples in your 
+free or proprietary project without any limitations.
+
+It is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+==========================================
+
+CameraControlTool's icon author is Lubos Volkov (free for use license).
+
+==========================================
