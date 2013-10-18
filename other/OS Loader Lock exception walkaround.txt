@@ -1,0 +1,6 @@
+OS Loader Lock exception walkaround
+
+http://social.msdn.microsoft.com/forums/en-US/gametechnologiesgeneral/thread/5eea42dc-95e6-47e2-b992-2e48291e6bf7/
+
+In VS2005 go to Debug/Exceptions. OPen up the Managed Debugging Assistants node on the tree 
+and scroll down till you find LoaderLock and uncheck it.

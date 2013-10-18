@@ -1,0 +1,34 @@
+=========================================================================
+DirectX image overlay (via Direct3D surface)
+=========================================================================
+Camera_Net can use Direct3D image overlay.
+It will allow you the use overlay with alpha-channel in range 0-255, 
+not binary as in GDI colorkey mode.
+
+NOTE 1: I don't really know why you should use Direct3D.
+Probably it only makes sense if you're already using Direct3D in your application.
+
+NOTE 2: Direct3D is dumb and this feature is deprecated for a long time.
+The last Direct SDK that still has the managed wrappers is February 2010.
+
+=========================================================================
+Anyway, if you want to use DirectX bitmap overlay 
+with Direct3D surfaces you should do several steps:
+
+1) Download and install DirectX SDK 
+https://www.microsoft.com/en-us/download/details.aspx?id=10084
+It'll make Microsoft.DirectX.Direct3D namespace available.
+NOTE: Installation of DirectX SDK will require loathsome Microsoft validation.
+
+2) Build Camera_Net library with additional definition: USE_D3D
+It'll will #define "USE_D3D" for all files in library. 
+Magic conditional macros will do all the rest tricks.
+
+3) After rebuild Camera and CameraControl classes will have UseGDI property.
+Set UseGDI to false after initializing camera (e.g. after CameraControl.SetCamera() call).
+
+NOTE: There can be some build problems, I don't use this for long time 
+and think Direct3D is almost useless in this project.
+=========================================================================
+
+
