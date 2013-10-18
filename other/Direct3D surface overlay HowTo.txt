@@ -27,7 +27,7 @@ Magic conditional macros will do all the rest tricks.
 3) After rebuild Camera and CameraControl classes will have UseGDI property.
 Set UseGDI to false after initializing camera (e.g. after CameraControl.SetCamera() call).
 
-NOTE: There can be some build problems, I've used it for a long time 
+NOTE: There can be some build problems, I haven't used it for a long time 
 and I think Direct3D is almost useless in this project.
 =========================================================================
 
