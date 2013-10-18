@@ -2,8 +2,8 @@
 DirectX image overlay (via Direct3D surface)
 =========================================================================
 Camera_Net can use Direct3D image overlay.
-It will allow you the use overlay with alpha-channel in range 0-255, 
-not binary as in GDI colorkey mode.
+It will allow you to use overlay with 8-bit alpha-channel, 
+not 1-bit as in GDI colorkey mode.
 
 NOTE 1: I don't really know why you should use Direct3D.
 Probably it only makes sense if you're already using Direct3D in your application.
@@ -27,8 +27,8 @@ Magic conditional macros will do all the rest tricks.
 3) After rebuild Camera and CameraControl classes will have UseGDI property.
 Set UseGDI to false after initializing camera (e.g. after CameraControl.SetCamera() call).
 
-NOTE: There can be some build problems, I don't use this for long time 
-and think Direct3D is almost useless in this project.
+NOTE: There can be some build problems, I've used it for a long time 
+and I think Direct3D is almost useless in this project.
 =========================================================================
 
 
