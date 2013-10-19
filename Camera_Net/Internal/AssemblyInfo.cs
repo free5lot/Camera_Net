@@ -32,10 +32,10 @@ using System.Runtime.CompilerServices;
 //
 
 [assembly: AssemblyTitle("Camera_NET")]
-[assembly: AssemblyDescription("Camera wrapper for directshow for .NET")]
+[assembly: AssemblyDescription("Camera .NET wrapper for DirectShow")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyCopyright("GNU Lesser General Public License v3.0")]
+[assembly: AssemblyCopyright("GNU Lesser General Public License v3.0 or later")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]		
 
