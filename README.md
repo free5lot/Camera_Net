@@ -13,6 +13,8 @@ A .NET library for camera easy use via DirectShow
 7. Display dialog windows of the camera (from drivers)
 8. Get a list of available cameras and resolutions
 
+![Complicated sample of Camera_Net library use. Stranger on television.](https://raw.github.com/free5lot/Camera_Net/master/screenshots/CameraControlTool_sample_screenshot.png "Complicated sample of Camera_Net library use. Stranger on television.")
+
 ### About the library
 The library was created because I've failed to find a library among dozens of open source solutions that would support what I wanted: easy use of camera as a component, ability to change the camera resolution, take frame snapshots, show overlay images over the frame.
 
@@ -33,6 +35,8 @@ This library is distributed in the hope that it will be useful, but WITHOUT ANY 
 ##### Samples license
 While the Camera_Net library is covered by LGPL, the samples are released as **PUBLIC DOMAIN**.
 So, you can use code from these samples in your  free or proprietary project without any limitations.
+
+![Simple sample of Camera_Net library use.](https://raw.github.com/free5lot/Camera_Net/master/screenshots/Simple_sample_screenshot.png "Simple sample of Camera_Net library use.")
 
 ### Links to related open source projects:
 - [DirectShow.NET –  CodeProject](http://www.codeproject.com/Articles/2615/DirectShow-NET)
