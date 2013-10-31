@@ -34,7 +34,7 @@ namespace Camera_NET
     /// 
     /// <author> Zakhar Semenov </author>
     /// <version> 2013.10.16 </version>
-    public class Resolution : IComparable<Resolution>
+    public class Resolution : IComparable<Resolution>, IEquatable<Resolution>
     {
         /// <summary>
         /// Width of frame of video output.
@@ -109,6 +109,18 @@ namespace Camera_NET
         {
             Resolution copy = new Resolution(Width, Height);
             return copy;
+        }
+
+        public bool Equals(Resolution other)
+        {
+            if (other == null)
+                return false;
+
+            if (this.Height != other.Height ||
+                this.Width  != other.Width)
+                return false;
+
+            return true;
         }
     }
 

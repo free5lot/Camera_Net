@@ -212,7 +212,7 @@ namespace Camera_NET
                     pixelFormat = PixelFormat.Format48bppRgb;
                     break;
                 default:
-                    throw new Exception("unknown BitCount");
+                    throw new Exception("Unsupported BitCount");
             }
 
             Bitmap bitmap = new Bitmap(m_videoWidth, m_videoHeight, (m_videoBitCount / 8) * m_videoWidth, pixelFormat, ip);
@@ -265,7 +265,7 @@ namespace Camera_NET
                     break;
                 default:
 
-                    throw new Exception("unknown BitCount");
+                    throw new Exception("Unsupported BitCount");
             }
 
             Bitmap bitmap = new Bitmap(m_videoWidth, m_videoHeight, (m_videoBitCount / 8) * m_videoWidth, pixelFormat, ip);

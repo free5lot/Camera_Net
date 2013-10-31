@@ -803,7 +803,7 @@ namespace Camera_NET
                             pixelFormat = PixelFormat.Format48bppRgb;
                             break;
                         default:
-                            throw new Exception("unknown BitCount");
+                            throw new Exception("Unsupported BitCount");
                     }
 
                     // TODO: i don't like 40 here. Should be sizeof()
@@ -1568,7 +1568,8 @@ namespace Camera_NET
                 v = (VideoInfoHeader)Marshal.PtrToStructure(pmtConfig.formatPtr, typeof(VideoInfoHeader));
 
                 // Save resolution
-                if (v.BmiHeader.BitCount != 24)
+                if (v.BmiHeader.BitCount != 24 &&
+                    v.BmiHeader.BitCount != 16)
                     continue; // We want only RGB modes available for usage
 
                 Resolution resolution = new Resolution( v.BmiHeader.Width, v.BmiHeader.Height );
