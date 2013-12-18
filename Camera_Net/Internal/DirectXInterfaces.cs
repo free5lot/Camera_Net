@@ -93,11 +93,6 @@ namespace Camera_NET
         /// </summary>
         public IBaseFilter      CaptureFilter = null;
 
-        ///// <summary>
-        ///// Used to snap picture on Still pin
-        ///// </summary>
-        //private IAMVideoControl m_VidControl = null;
-
         /// <summary>
         /// Closes and releases all used interfaces.
         /// </summary>

@@ -101,7 +101,18 @@ namespace CameraControlTool
         // Set current camera to camera_device
         private void SetCamera(IMoniker camera_moniker, Resolution resolution)
         {
-            cameraControl.SetCamera(camera_moniker, resolution);
+            try
+            {
+                // NOTE: You can debug with DirectShow logging:
+                //cameraControl.DirectShowLogFilepath = @"C:\YOUR\LOG\PATH.txt";
+
+                // Makes all magic with camera and DirectShow graph
+                cameraControl.SetCamera(camera_moniker, resolution);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, @"Error while running camera");
+            }
 
             if (!cameraControl.CameraCreated)
                 return;
@@ -110,10 +121,12 @@ namespace CameraControlTool
             // (see documentation about rebuild of library for it)
             //cameraControl.UseGDI = false;
 
-            UpdateCameraBitmap();
+            cameraControl.MixerEnabled = true;
+
             cameraControl.OutputVideoSizeChanged += Camera_OutputVideoSizeChanged;
 
-            cameraControl.MixerEnabled = true;
+            UpdateCameraBitmap();            
+
 
             // gui update
             UpdateGUIButtons();
@@ -152,10 +165,9 @@ namespace CameraControlTool
             {
                 bitmap = cameraControl.SnapshotSourceImage();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                //NOTE: You may show error message if you want
-                return;
+                MessageBox.Show(ex.Message, @"Error while getting a snapshot");
             }
 
             if (bitmap == null)
@@ -218,6 +230,9 @@ namespace CameraControlTool
         // Generate bitmap for overlay
         private void UpdateCameraBitmap()
         {
+            if (!cameraControl.MixerEnabled)
+                return;
+
             cameraControl.OverlayBitmap = GenerateColorKeyBitmap(false);
 
             #region D3D bitmap mixer
@@ -238,6 +253,9 @@ namespace CameraControlTool
         {
             int w = cameraControl.OutputVideoSize.Width;
             int h = cameraControl.OutputVideoSize.Height;
+
+            if (w <= 0 || h <= 0)
+                return null;
 
             // Create RGB bitmap
             Bitmap bmp = new Bitmap(w, h, PixelFormat.Format24bppRgb);
@@ -676,6 +694,14 @@ namespace CameraControlTool
         }
 
         #endregion
+
+        private void buttonPinOutputSettings_Click(object sender, EventArgs e)
+        {
+            if (cameraControl.CameraCreated)
+            {
+                cameraControl.DisplayPropertyPage_SourcePinOutput(this.Handle);
+            }
+        }
 
 
 

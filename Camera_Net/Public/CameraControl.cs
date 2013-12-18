@@ -75,6 +75,9 @@ namespace Camera_NET
             // Create camera object
             _Camera = new Camera();
 
+            if (!string.IsNullOrEmpty(_DirectShowLogFilepath))
+                _Camera.DirectShowLogFilepath = _DirectShowLogFilepath;
+
             // select resolution
             //ResolutionList resolutions = Camera.GetResolutionList(moniker);
 
@@ -305,6 +308,29 @@ namespace Camera_NET
             }
         }
 
+        /// <summary>
+        /// Log file path for directshow (used in BuildGraph)
+        /// </summary> 
+        /// <seealso cref="BuildGraph"/>
+        public string DirectShowLogFilepath
+        {
+            get
+            {
+                if (!CameraCreated)
+                    return _DirectShowLogFilepath;
+                else
+                    return _Camera.DirectShowLogFilepath;
+            }
+            set
+            {
+                _DirectShowLogFilepath = value;
+
+                if (CameraCreated)
+                    _Camera.DirectShowLogFilepath = _DirectShowLogFilepath;
+            }
+        }
+
+
         #if USE_D3D
         /// <summary>
         /// Gets a value that determines whether GDI or Direct3D is used for drawing over mixer image.
@@ -377,6 +403,17 @@ namespace Camera_NET
             _ThrowIfCameraWasNotCreated();
 
             _Camera.DisplayPropertyPage_CaptureFilter(hwndOwner);
+        }
+
+        /// <summary>
+        /// Displays property page for filter's pin output.
+        /// </summary>
+        /// <param name="hwndOwner">The window handler for to make it parent of property page</param>
+        public void DisplayPropertyPage_SourcePinOutput(IntPtr hwndOwner)
+        {
+            _ThrowIfCameraWasNotCreated();
+
+            _Camera.DisplayPropertyPage_SourcePinOutput(hwndOwner);
         }
 
         #endregion
@@ -512,9 +549,14 @@ namespace Camera_NET
         private Camera _Camera = null;
 
         /// <summary>
+        /// Log file path for DirectShow (should be saved longer than _Camera lives)
+        /// </summary>
+        private string _DirectShowLogFilepath = string.Empty;
+
+        /// <summary>
         /// Message for exception when functions are called if camera not being created.
         /// </summary>
-        private const string CameraWasNotCreatedMessage = @"Camera is not created";
+        private const string CameraWasNotCreatedMessage = @"Camera is not created.";
 
         /// <summary>
         /// Checks if camera is created and throws ApplicationException if not.
@@ -522,7 +564,7 @@ namespace Camera_NET
         private void _ThrowIfCameraWasNotCreated()
         {
             if (!CameraCreated)
-                throw new ApplicationException(CameraWasNotCreatedMessage);
+                throw new Exception(CameraWasNotCreatedMessage);
         }
 
         #endregion

@@ -72,5 +72,26 @@ namespace Camera_NET
         int lcid,
         int dwReserved,
         IntPtr lpvReserved);
+
+    [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+    public static extern IntPtr CreateFile(
+         [MarshalAs(UnmanagedType.LPTStr)] string filename,
+         [MarshalAs(UnmanagedType.U4)] System.IO.FileAccess access,
+         [MarshalAs(UnmanagedType.U4)] System.IO.FileShare share,
+         IntPtr securityAttributes, // optional SECURITY_ATTRIBUTES struct or IntPtr.Zero
+         [MarshalAs(UnmanagedType.U4)] System.IO.FileMode creationDisposition,
+         [MarshalAs(UnmanagedType.U4)] System.IO.FileAttributes flagsAndAttributes,
+         IntPtr templateFile);
+
+    [DllImport("kernel32.dll", SetLastError = true)]
+    [return: MarshalAs(UnmanagedType.Bool)]
+    public static extern bool CloseHandle(IntPtr hObject);
+
+    [DllImport("kernel32.dll")]
+    public static extern bool SetFilePointerEx(IntPtr hFile, long liDistanceToMove,
+       IntPtr lpNewFilePointer, uint dwMoveMethod);
+
+    // SetFilePointerEx uses flag to append
+    public const uint FILE_END = 2;
   }
 }

@@ -169,7 +169,7 @@ namespace Camera_NET
 
                 return cam_index;
             }
-            catch (Exception)
+            catch
             {
                 throw;
             }
