@@ -57,14 +57,12 @@ namespace VerySimple
             }
         }
 
-
         // On close of Form
         private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
         {
             // Close camera. It's safe to call CloseCamera() even if no camera was set.
             cameraControl.CloseCamera();
         }
-
 
     }
 }
