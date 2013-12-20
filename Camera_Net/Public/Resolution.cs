@@ -49,8 +49,8 @@ namespace Camera_NET
         /// <summary>
         /// Constructor for <see cref="Resolution"/> class.
         /// </summary>
-        /// <param name="width">Width of frame of video output</param>
-        /// <param name="height">Height of frame of video output</param>
+        /// <param name="width">Width of frame of video output.</param>
+        /// <param name="height">Height of frame of video output.</param>
         public Resolution(int width, int height)
         {
             Width = width;
@@ -60,7 +60,7 @@ namespace Camera_NET
         /// <summary>
         /// Comparator for IComparable<Resolution>
         /// </summary>
-        /// <param name="y">Resolution we should compare to</param>
+        /// <param name="y">Resolution we should compare to.</param>
         public int CompareTo(Resolution y)
         {
             Resolution x = this;

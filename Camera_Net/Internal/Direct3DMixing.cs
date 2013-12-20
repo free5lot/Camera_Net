@@ -36,7 +36,7 @@ namespace Camera_NET
     #endregion
 
     /// <summary>
-    /// Direct3DMixing class for Direct3D mixing image overlay
+    /// Direct3DMixing class for Direct3D mixing image overlay.
     /// </summary>
     /// 
     /// <author> Zakhar Semenov </author>
@@ -55,7 +55,7 @@ namespace Camera_NET
         /// <summary>
         /// Initializes managed Direct3D device if it's not already done.
         /// </summary>
-        /// <param name="hostingControl">Control used for managed Direct3D device</param>
+        /// <param name="hostingControl">Control used for managed Direct3D device.</param>
         public void InitializeIfNeeded(Control hostingControl)
         {
             if (m_bDirect3DInitialized)
@@ -100,7 +100,7 @@ namespace Camera_NET
         /// <summary>
         /// Stores an image (bitmap) to Direct3D surface.
         /// </summary>
-        /// <param name="alphaBitmap">Bitmap to store to DX surface</param>
+        /// <param name="alphaBitmap">Bitmap to store to DX surface.</param>
         public void StoreBitmapToSurface(Bitmap alphaBitmap)
         {
             // Create a surface from our alpha bitmap

@@ -178,8 +178,8 @@ namespace Camera_NET
         /// <summary>
         /// Internal. Displays a property page for a filter
         /// </summary>
-        /// <param name="filter">The filter for which to display a property page</param>
-        /// <param name="hwndOwner">The window handler for to make it parent of property page</param>
+        /// <param name="filter">The filter for which to display a property page.</param>
+        /// <param name="hwndOwner">The window handler for to make it parent of property page.</param>
         internal static void DisplayPropertyPageFilter(IBaseFilter filter, IntPtr hwndOwner)
         {
             _DisplayPropertyPage(filter, hwndOwner);
@@ -463,7 +463,7 @@ namespace Camera_NET
         /// <summary>
         /// Returns Moniker (device identification) of camera from device index.
         /// </summary>
-        /// <param name="iDeviceIndex">Index (Zero-based) in list of available devices with VideoInputDevice filter category</param>
+        /// <param name="iDeviceIndex">Index (Zero-based) in list of available devices with VideoInputDevice filter category.</param>
         /// <returns>Moniker (device identification) of device</returns>
         public static IMoniker GetDeviceMoniker(int iDeviceIndex)
         {
@@ -483,7 +483,7 @@ namespace Camera_NET
         /// <summary>
         /// Returns available resolutions with RGB color system for device moniker
         /// </summary>
-        /// <param name="moniker">Moniker (device identification) of camera</param>
+        /// <param name="moniker">Moniker (device identification) of camera.</param>
         /// <returns>List of resolutions with RGB color system of device</returns>
         public static ResolutionList GetResolutionList(IMoniker moniker)
         {
@@ -531,10 +531,10 @@ namespace Camera_NET
         }
 
         /// <summary>
-        /// Initializes camera and connects it to HostingControl and Moniker
+        /// Initializes camera and connects it to HostingControl and Moniker.
         /// </summary>
         /// <param name="hControl">Control that is used for hosting camera's output.</param>
-        /// <param name="moniker">Moniker (device identification) of camera</param>
+        /// <param name="moniker">Moniker (device identification) of camera.</param>
         /// <seealso cref="HostingControl"/>
         /// <seealso cref="Moniker"/>
         public void Initialize(Control hControl, IMoniker moniker)
@@ -575,7 +575,7 @@ namespace Camera_NET
         }
 
         /// <summary>
-        /// Close and dispose all camera and DirectX stuff
+        /// Close and dispose all camera and DirectX stuff.
         /// </summary>
         public void CloseAll()
         {
@@ -739,8 +739,8 @@ namespace Camera_NET
         /// <summary>
         /// Displays property page for device.
         /// </summary>
-        /// <param name="moniker">Moniker (device identification) of camera</param>
-        /// <param name="hwndOwner">The window handler for to make it parent of property page</param>
+        /// <param name="moniker">Moniker (device identification) of camera.</param>
+        /// <param name="hwndOwner">The window handler for to make it parent of property page.</param>
         /// <seealso cref="Moniker"/>
         public static void DisplayPropertyPage_Device(IMoniker moniker, IntPtr hwndOwner)
         {
@@ -762,7 +762,7 @@ namespace Camera_NET
         /// <summary>
         /// Displays property page for crossbar if it's available.
         /// </summary>
-        /// <param name="hwndOwner">The window handler for to make it parent of property page</param>
+        /// <param name="hwndOwner">The window handler for to make it parent of property page.</param>
         /// <seealso cref="CrossbarAvailable"/>
         public void DisplayPropertyPage_Crossbar(IntPtr hwndOwner)
         {
@@ -778,7 +778,7 @@ namespace Camera_NET
         /// <summary>
         /// Displays property page for capture filter.
         /// </summary>
-        /// <param name="hwndOwner">The window handler for to make it parent of property page</param>
+        /// <param name="hwndOwner">The window handler for to make it parent of property page.</param>
         public void DisplayPropertyPage_CaptureFilter(IntPtr hwndOwner)
         {
             DisplayPropertyPageFilter(DX.CaptureFilter, hwndOwner);
@@ -787,7 +787,7 @@ namespace Camera_NET
         /// <summary>
         /// Displays property page for filter's pin output.
         /// </summary>
-        /// <param name="hwndOwner">The window handler for to make it parent of property page</param>
+        /// <param name="hwndOwner">The window handler for to make it parent of property page.</param>
         public void DisplayPropertyPage_SourcePinOutput(IntPtr hwndOwner)
         {
             IPin pinSourceCapture = null;
@@ -814,9 +814,9 @@ namespace Camera_NET
         #region TV Mode
 
         /// <summary>
-        /// Sets TV Mode for device
+        /// Sets TV Mode for device.
         /// </summary>
-        /// <param name="mode">TV Mode to set (analog video standard)</param>
+        /// <param name="mode">TV Mode to set (analog video standard).</param>
         public void SetTVMode(AnalogVideoStandard mode)
         {
             if (DX.CaptureFilter == null)
@@ -834,7 +834,7 @@ namespace Camera_NET
         }
 
         /// <summary>
-        /// Gets TV Mode of device
+        /// Gets TV Mode of device.
         /// </summary>
         /// <returns>TV Mode of device (analog video standard)</returns>
         public AnalogVideoStandard GetTVMode()
@@ -993,7 +993,7 @@ namespace Camera_NET
         }
 
         /// <summary>
-        /// Checks if AMMediaType's resolution is appropriate for resolution_desired
+        /// Checks if AMMediaType's resolution is appropriate for desired resolution.
         /// </summary>
         /// <param name="media_type">Media type to analyze.</param>
         /// <param name="resolution_desired">Desired resolution. Can be null or have 0 for height or width if it's not important.</param>
@@ -1483,7 +1483,7 @@ namespace Camera_NET
         /// <summary>
         /// Gets type of input connected to video output of the crossbar.
         /// </summary>
-        /// <param name="crossbar">The crossbar of device</param>
+        /// <param name="crossbar">The crossbar of device.</param>
         /// <returns>Video input of device</returns>
         /// <seealso cref="CrossbarAvailable"/>
         private static VideoInput GetCrossbarInput(IAMCrossbar crossbar)
@@ -1534,8 +1534,8 @@ namespace Camera_NET
         /// <summary>
         /// Sets type of input connected to video output of the crossbar.
         /// </summary>
-        /// <param name="crossbar">The crossbar of device</param>
-        /// <param name="videoInput">Video input of device</param>
+        /// <param name="crossbar">The crossbar of device.</param>
+        /// <param name="videoInput">Video input of device.</param>
         /// <seealso cref="CrossbarAvailable"/>
         private static void SetCrossbarInput(IAMCrossbar crossbar, VideoInput videoInput)
         {
@@ -1711,7 +1711,7 @@ namespace Camera_NET
         /// <summary>
         /// Gets available resolutions (which are appropriate for us) for capture filter.
         /// </summary>
-        /// <param name="captureFilter">Capture filter for asking for resolution list</param>
+        /// <param name="captureFilter">Capture filter for asking for resolution list.</param>
         private static ResolutionList GetResolutionsAvailable(IBaseFilter captureFilter)
         {
             ResolutionList resolution_list = null;
@@ -1741,9 +1741,9 @@ namespace Camera_NET
         }
 
         /// <summary>
-        /// Free media type if needed
+        /// Free media type if needed.
         /// </summary>
-        /// <param name="media_type">Media type to free</param>
+        /// <param name="media_type">Media type to free.</param>
         private static void FreeMediaType(ref AMMediaType media_type)
         {
             if (media_type == null)
@@ -1754,9 +1754,9 @@ namespace Camera_NET
         }
 
         /// <summary>
-        /// Free SCC (it's not used but required for GetStreamCaps())
+        /// Free SCC (it's not used but required for GetStreamCaps()).
         /// </summary>
-        /// <param name="pSCC">SCC to free</param>
+        /// <param name="pSCC">SCC to free.</param>
         private static void FreeSCCMemory(ref IntPtr pSCC)
         {
             if (pSCC == IntPtr.Zero)
@@ -1770,7 +1770,7 @@ namespace Camera_NET
         /// <summary>
         /// Gets available resolutions (which are appropriate for us) for capture pin (PinCategory.Capture).
         /// </summary>
-        /// <param name="captureFilter">Capture pin (PinCategory.Capture) for asking for resolution list</param>
+        /// <param name="captureFilter">Capture pin (PinCategory.Capture) for asking for resolution list.</param>
         private static ResolutionList GetResolutionsAvailable(IPin pinOutput)
         {
             int hr = 0;
@@ -1846,7 +1846,7 @@ namespace Camera_NET
         /// <summary>
         /// Converts window coordinates to normalized.
         /// </summary>
-        /// <param name="point">Point in window coordinates</param>
+        /// <param name="point">Point in window coordinates.</param>
         /// <returns>Normalized coordinates</returns>
         public PointF ConvertWinToNorm(PointF point)
         {
@@ -1879,7 +1879,7 @@ namespace Camera_NET
         /// <summary>
         /// Sets camera output rect (zooms to selected rect).
         /// </summary>
-        /// <param name="zoomRect">Rectangle for zooming in video coordinates</param>
+        /// <param name="zoomRect">Rectangle for zooming in video coordinates.</param>
         public void ZoomToRect(Rectangle zoomRect)
         {
             if (zoomRect.Height == 0 || zoomRect.Width == 0)
@@ -1988,7 +1988,7 @@ namespace Camera_NET
         /// <summary>
         /// Releases COM object
         /// </summary>
-        /// <param name="obj">COM object to release</param>
+        /// <param name="obj">COM object to release.</param>
         private static void SafeReleaseComObject(object obj)
         {
             if (obj != null)

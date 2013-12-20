@@ -60,10 +60,10 @@ namespace Camera_NET
         }
 
         /// <summary>
-        /// Initializes camera, builds and runs graph for control
+        /// Initializes camera, builds and runs graph for control.
         /// </summary>
-        /// <param name="moniker">Moniker (device identification) of camera</param>
-        /// <param name="resolution">Resolution of camera's output</param>
+        /// <param name="moniker">Moniker (device identification) of camera.</param>
+        /// <param name="resolution">Resolution of camera's output.</param>
         public void SetCamera(IMoniker moniker, Resolution resolution)
         {
             // Close current if it was opened
@@ -98,7 +98,7 @@ namespace Camera_NET
         }
 
         /// <summary>
-        /// Close and dispose all camera and DirectX stuff
+        /// Close and dispose all camera and DirectX stuff.
         /// </summary>
         public void CloseCamera()
         {
@@ -309,7 +309,7 @@ namespace Camera_NET
         }
 
         /// <summary>
-        /// Log file path for directshow (used in BuildGraph)
+        /// Log file path for directshow (used in BuildGraph).
         /// </summary> 
         /// <seealso cref="BuildGraph"/>
         public string DirectShowLogFilepath
@@ -374,8 +374,8 @@ namespace Camera_NET
         /// <summary>
         /// Displays property page for device.
         /// </summary>
-        /// <param name="moniker">Moniker (device identification) of camera</param>
-        /// <param name="hwndOwner">The window handler for to make it parent of property page</param>
+        /// <param name="moniker">Moniker (device identification) of camera.</param>
+        /// <param name="hwndOwner">The window handler for to make it parent of property page.</param>
         /// <seealso cref="Moniker"/>
         public static void DisplayPropertyPage_Device(IMoniker moniker, IntPtr hwndOwner)
         {
@@ -385,7 +385,7 @@ namespace Camera_NET
         /// <summary>
         /// Displays property page for crossbar if it's available.
         /// </summary>
-        /// <param name="hwndOwner">The window handler for to make it parent of property page</param>
+        /// <param name="hwndOwner">The window handler for to make it parent of property page.</param>
         /// <seealso cref="CrossbarAvailable"/>
         public void DisplayPropertyPage_Crossbar(IntPtr hwndOwner)
         {
@@ -397,7 +397,7 @@ namespace Camera_NET
         /// <summary>
         /// Displays property page for capture filter.
         /// </summary>
-        /// <param name="hwndOwner">The window handler for to make it parent of property page</param>
+        /// <param name="hwndOwner">The window handler for to make it parent of property page.</param>
         public void DisplayPropertyPage_CaptureFilter(IntPtr hwndOwner)
         {
             _ThrowIfCameraWasNotCreated();
@@ -408,7 +408,7 @@ namespace Camera_NET
         /// <summary>
         /// Displays property page for filter's pin output.
         /// </summary>
-        /// <param name="hwndOwner">The window handler for to make it parent of property page</param>
+        /// <param name="hwndOwner">The window handler for to make it parent of property page.</param>
         public void DisplayPropertyPage_SourcePinOutput(IntPtr hwndOwner)
         {
             _ThrowIfCameraWasNotCreated();
@@ -423,9 +423,9 @@ namespace Camera_NET
         #region TV Mode
 
         /// <summary>
-        /// Sets TV Mode for device
+        /// Sets TV Mode for device.
         /// </summary>
-        /// <param name="mode">TV Mode to set (analog video standard)</param>
+        /// <param name="mode">TV Mode to set (analog video standard).</param>
         public void SetTVMode(AnalogVideoStandard mode)
         {
             _ThrowIfCameraWasNotCreated();
@@ -434,7 +434,7 @@ namespace Camera_NET
         }
 
         /// <summary>
-        /// Gets TV Mode of device
+        /// Gets TV Mode of device.
         /// </summary>
         /// <returns>TV Mode of device (analog video standard)</returns>
         public AnalogVideoStandard GetTVMode()
@@ -489,7 +489,7 @@ namespace Camera_NET
         /// <summary>
         /// Converts window coordinates to normalized.
         /// </summary>
-        /// <param name="point">Point in window coordinates</param>
+        /// <param name="point">Point in window coordinates.</param>
         /// <returns>Normalized coordinates</returns>
         public PointF ConvertWinToNorm(PointF p)
         {
@@ -501,7 +501,7 @@ namespace Camera_NET
         /// <summary>
         /// Sets camera output rect (zooms to selected rect).
         /// </summary>
-        /// <param name="zoomRect">Rectangle for zooming in video coordinates</param>
+        /// <param name="zoomRect">Rectangle for zooming in video coordinates.</param>
         public void ZoomToRect(Rectangle ZoomRect)
         {
             _ThrowIfCameraWasNotCreated();
@@ -518,7 +518,7 @@ namespace Camera_NET
         /// <summary>
         /// Returns Moniker (device identification) of camera from device index.
         /// </summary>
-        /// <param name="iDeviceIndex">Index (Zero-based) in list of available devices with VideoInputDevice filter category</param>
+        /// <param name="iDeviceIndex">Index (Zero-based) in list of available devices with VideoInputDevice filter category.</param>
         /// <returns>Moniker (device identification) of device</returns>
         public static IMoniker GetDeviceMoniker(int iDeviceNum)
         {
@@ -526,9 +526,9 @@ namespace Camera_NET
         }
 
         /// <summary>
-        /// Returns available resolutions with RGB color system for device moniker
+        /// Returns available resolutions with RGB color system for device moniker.
         /// </summary>
-        /// <param name="moniker">Moniker (device identification) of camera</param>
+        /// <param name="moniker">Moniker (device identification) of camera.</param>
         /// <returns>List of resolutions with RGB color system of device</returns>
         public static ResolutionList GetResolutionList(IMoniker moniker)
         {
@@ -549,7 +549,7 @@ namespace Camera_NET
         private Camera _Camera = null;
 
         /// <summary>
-        /// Log file path for DirectShow (should be saved longer than _Camera lives)
+        /// Log file path for DirectShow (should be saved longer than _Camera lives).
         /// </summary>
         private string _DirectShowLogFilepath = string.Empty;
 

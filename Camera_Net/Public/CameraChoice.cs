@@ -95,8 +95,8 @@ namespace Camera_NET
         /// <summary>
         /// Returns Camera by Name and Index (if there can be more than one camera with this name)
         /// </summary>
-        /// <param name="camera_name">Name of camera</param>
-        /// <param name="index_in_same_names">Index if there can be more than one camera with this name</param>
+        /// <param name="camera_name">Name of camera.</param>
+        /// <param name="index_in_same_names">Index if there can be more than one camera with this name.</param>
         /// <returns>Camera device</returns>
         public DsDevice GetCameraByName(string camera_name, int index_in_same_names)
         {
@@ -135,7 +135,7 @@ namespace Camera_NET
         /// <summary>
         /// Returns camera index in devices list
         /// </summary>
-        /// <param name="cam">Camera to get index of</param>
+        /// <param name="cam">Camera to get index of.</param>
         /// <returns>Index of camera device</returns>
         public int GetCameraIndexInDevices(DsDevice cam)
         {
@@ -178,9 +178,9 @@ namespace Camera_NET
         /// <summary>
         /// Returns name of caerma from DsDevice
         /// </summary>
-        /// <param name="camera">Camera to get name of</param>
-        /// <param name="camera_name">Name of camera</param>
-        /// <param name="index_in_same_names">Index if there can be more than one camera with this name</param>
+        /// <param name="camera">Camera to get name of.</param>
+        /// <param name="camera_name">Name of camera.</param>
+        /// <param name="index_in_same_names">Index if there can be more than one camera with this name.</param>
         /// <returns>True if found, False otherwise</returns>
         public bool GetNameByCamera(DsDevice camera, out string camera_name, out int index_in_same_names)
         {

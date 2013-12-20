@@ -53,8 +53,8 @@ namespace Camera_NET
         /// <summary>
         /// Default constructor for <see cref="SampleGrabberHelper"/> class.
         /// </summary>
-        /// <param name="sampleGrabber">Pointer to COM-interface ISampleGrabber</param>
-        /// <param name="buffer_samples_of_current_frame">Flag means should helper store (buffer) samples of current frame or not</param>
+        /// <param name="sampleGrabber">Pointer to COM-interface ISampleGrabber.</param>
+        /// <param name="buffer_samples_of_current_frame">Flag means should helper store (buffer) samples of current frame or not.</param>
         public SampleGrabberHelper(ISampleGrabber sampleGrabber, bool buffer_samples_of_current_frame)
         {
             m_SampleGrabber = sampleGrabber;

@@ -59,8 +59,8 @@ namespace Camera_NET
         /// <summary>
         /// Constructor for <see cref="VideoInput"/> class.
         /// </summary>
-        /// <param name="index">Index of the video input</param>
-        /// <param name="type">Type of the video input</param>
+        /// <param name="index">Index of the video input.</param>
+        /// <param name="type">Type of the video input.</param>
         public VideoInput(int index, PhysicalConnectorType type)
         {
             Index = index;
