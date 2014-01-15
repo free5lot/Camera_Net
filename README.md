@@ -3,6 +3,8 @@ Camera_NET
 A .NET library for camera easy use via DirectShow
 ----------
 
+_**NOTE: There is an [article on CodeProject.com about Camera Net library](http://www.codeproject.com/Articles/671407/Camera_Net-Library "Article about Camera_Net Library on CodeProject") and some additional information. Take a look.**_
+
 ### Features of the library:
 1. Select camera
 2. Select resolution
