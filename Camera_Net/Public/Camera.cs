@@ -49,7 +49,7 @@ namespace Camera_NET
     /// The Camera class is an main class that is a wrapper for video device.
     /// </summary>
     /// 
-    /// <author> Zakhar Semenov </author>
+    /// <author> free5lot (free5lot@yandex.ru) </author>
     /// <version> 2013.12.16 </version>
     public class Camera : IDisposable
     {

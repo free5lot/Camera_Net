@@ -39,7 +39,7 @@ namespace Camera_NET
     /// Direct3DMixing class for Direct3D mixing image overlay.
     /// </summary>
     /// 
-    /// <author> Zakhar Semenov </author>
+    /// <author> free5lot (free5lot@yandex.ru) </author>
     /// <version> 2013.10.17 </version>
     internal sealed class Direct3DMixing : IDisposable
     {

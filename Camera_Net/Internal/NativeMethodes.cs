@@ -35,7 +35,7 @@ namespace Camera_NET
     /// NativeMethodes is a wrapper for native methods.
     /// </summary>
     /// 
-    /// <author> Zakhar Semenov </author>
+    /// <author> free5lot (free5lot@yandex.ru) </author>
     /// <version> 2013.10.16 </version>
     internal sealed class NativeMethodes
     {

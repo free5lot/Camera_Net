@@ -43,7 +43,7 @@ namespace Camera_NET
     /// </summary>
     /// <remarks>This class is inherited from <see cref="UserControl"/> class.</remarks>
     /// 
-    /// <author> Zakhar Semenov </author>
+    /// <author> free5lot (free5lot@yandex.ru) </author>
     /// <version> 2013.10.15 </version>
     public partial class CameraControl : UserControl
     {       

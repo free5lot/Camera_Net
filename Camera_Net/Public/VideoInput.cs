@@ -37,7 +37,7 @@ namespace Camera_NET
     /// <remarks>The class is used to describe video input of devices like video capture boards,
     /// which usually provide several inputs.
     /// </remarks>
-    /// <author> Zakhar Semenov </author>
+    /// <author> free5lot (free5lot@yandex.ru) </author>
     /// <version> 2013.10.16 </version>
     public class VideoInput
     {

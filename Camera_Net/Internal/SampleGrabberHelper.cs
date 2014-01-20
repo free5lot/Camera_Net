@@ -44,7 +44,7 @@ namespace Camera_NET
     /// </summary>
     /// <remarks>This class is inherited from <see cref="ISampleGrabberCB"/> class.</remarks>
     /// 
-    /// <author> Zakhar Semenov </author>
+    /// <author> free5lot (free5lot@yandex.ru) </author>
     /// <version> 2013.10.17 </version>
     internal sealed class SampleGrabberHelper : ISampleGrabberCB, IDisposable
     {

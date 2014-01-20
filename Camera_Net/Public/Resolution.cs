@@ -32,7 +32,7 @@ namespace Camera_NET
     /// Resolution class for <see cref="Camera"/>.
     /// </summary>
     /// 
-    /// <author> Zakhar Semenov </author>
+    /// <author> free5lot (free5lot@yandex.ru) </author>
     /// <version> 2013.10.16 </version>
     public class Resolution : IComparable<Resolution>, IEquatable<Resolution>
     {
