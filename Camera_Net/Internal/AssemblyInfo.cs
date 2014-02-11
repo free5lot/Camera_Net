@@ -39,7 +39,7 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]		
 
-[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.1.1.0")]
 #if DEBUG
 [assembly: AssemblyProduct("Debug Version")]
 #else
