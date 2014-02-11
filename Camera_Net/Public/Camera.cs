@@ -1650,8 +1650,29 @@ namespace Camera_NET
             if (DX.WindowlessCtrl != null && _HostingControl != null)
             {
                 IntPtr hdc = e.Graphics.GetHdc();
-                int hr = DX.WindowlessCtrl.RepaintVideo(_HostingControl.Handle, hdc);
-                e.Graphics.ReleaseHdc(hdc);
+                try
+                {
+                    int hr = DX.WindowlessCtrl.RepaintVideo(_HostingControl.Handle, hdc);
+                }
+                catch (System.Runtime.InteropServices.COMException ex)
+                {
+                    // Catch com-expection VFW_E_BUFFER_NOTSET (0x8004020c) in RepaintVideo() and ignore it
+                    // it can be in the moment of moving window out of first monitor to second one.
+                    // NOTE: This could be probably fixed with checking if graph is running or not
+                    if (ex.ErrorCode == DsResults.E_BufferNotSet)
+                    {
+                        ; // ignore exception
+                    }
+                    else
+                    {
+                        throw; // re-throw exception up
+                    }
+                
+                }
+                finally
+                {
+                    e.Graphics.ReleaseHdc(hdc);
+                }
             }
         }
 
