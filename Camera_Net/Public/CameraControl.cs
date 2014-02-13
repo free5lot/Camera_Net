@@ -32,6 +32,7 @@ namespace Camera_NET
     using System.Diagnostics;
     using System.Windows.Forms;
     using System.Runtime.InteropServices.ComTypes;
+    using System.ComponentModel;
 
     // Use DirectShowLib (LGPL v2.1)
     using DirectShowLib;
@@ -121,6 +122,8 @@ namespace Camera_NET
         /// Gets  a value that determines whether or not a Camera object was created.
         /// </summary>
         /// <seealso cref="Camera"/>
+        [Browsable(false)] // hide from property browser
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)] // do not serialize to code ever
         public bool CameraCreated
         {
             get { return (_Camera != null); }
@@ -130,6 +133,8 @@ namespace Camera_NET
         /// Gets a Camera object.
         /// </summary>
         /// <seealso cref="Camera"/>
+        [Browsable(false)] // hide from property browser
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)] // do not serialize to code ever
         public Camera Camera
         {
             get { return _Camera; }
@@ -138,6 +143,8 @@ namespace Camera_NET
         /// <summary>
         /// Gets a camera moniker (device identification).
         /// </summary> 
+        [Browsable(false)] // hide from property browser
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)] // do not serialize to code ever
         public IMoniker Moniker
         {
             get
@@ -152,6 +159,8 @@ namespace Camera_NET
         /// Gets or sets a resolution of camera's output.
         /// </summary>
         /// <seealso cref="ResolutionListRGB"/>
+        [Browsable(false)] // hide from property browser
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)] // do not serialize to code ever
         public Resolution Resolution
         {
             get
@@ -171,6 +180,8 @@ namespace Camera_NET
         /// <summary>
         /// Gets a list of available resolutions (in RGB format).
         /// </summary>        
+        [Browsable(false)] // hide from property browser
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)] // do not serialize to code ever
         public ResolutionList ResolutionListRGB
         {
             get
@@ -185,6 +196,8 @@ namespace Camera_NET
         /// Gets or sets a value that determines whether or not the image mixer is enabled for camera output.
         /// </summary>
         /// <value>Set to true to enable image mixer for camera output, or false to disable.</value>
+        [Browsable(false)] // hide from property browser
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)] // do not serialize to code ever
         public bool MixerEnabled
         {
             get
@@ -204,6 +217,8 @@ namespace Camera_NET
         /// <summary>
         /// Gets or sets a GDI Alpha value.
         /// </summary>
+        [Browsable(false)] // hide from property browser
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)] // do not serialize to code ever
         public float GDIAlphaValue
         {
             get
@@ -224,6 +239,8 @@ namespace Camera_NET
         /// Gets a size of video output.
         /// </summary> 
         /// <seealso cref="OutputVideoSizeChanged"/>
+        [Browsable(false)] // hide from property browser
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)] // do not serialize to code ever
         public Size OutputVideoSize
         {
             get
@@ -238,6 +255,8 @@ namespace Camera_NET
         /// Gets or sets a RGB overlay bitmap used for GDI operations.
         /// </summary>         
         /// <seealso cref="GDIColorKey"/>
+        [Browsable(false)] // hide from property browser
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)] // do not serialize to code ever
         public Bitmap OverlayBitmap
         {
             get
@@ -258,6 +277,8 @@ namespace Camera_NET
         /// Gets or sets a color used as ColorKey for GDI operations.
         /// </summary> 
         /// <seealso cref="OverlayBitmap"/>
+        [Browsable(false)] // hide from property browser
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)] // do not serialize to code ever
         public Color GDIColorKey
         {
             get
@@ -278,6 +299,8 @@ namespace Camera_NET
         /// Gets a value that determines whether or not the crossbar is available for selected camera.
         /// </summary> 
         /// <seealso cref="VideoInput"/>
+        [Browsable(false)] // hide from property browser
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)] // do not serialize to code ever
         public bool CrossbarAvailable
         {
             get
@@ -292,6 +315,8 @@ namespace Camera_NET
         /// Gets or sets a video input of camera (via crossbar).
         /// </summary> 
         /// <seealso cref="CrossbarAvailable"/>
+        [Browsable(false)] // hide from property browser
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)] // do not serialize to code ever
         public VideoInput VideoInput
         {
             get
@@ -312,6 +337,7 @@ namespace Camera_NET
         /// Log file path for directshow (used in BuildGraph).
         /// </summary> 
         /// <seealso cref="BuildGraph"/>
+        [Description("Log file path for DirectShow (used in BuildGraph)")]
         public string DirectShowLogFilepath
         {
             get
