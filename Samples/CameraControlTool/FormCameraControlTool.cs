@@ -125,7 +125,7 @@ namespace CameraControlTool
 
             cameraControl.OutputVideoSizeChanged += Camera_OutputVideoSizeChanged;
 
-            UpdateCameraBitmap();            
+            UpdateCameraBitmap();
 
 
             // gui update
@@ -138,6 +138,9 @@ namespace CameraControlTool
 
         private void buttonMixerOnOff_Click(object sender, EventArgs e)
         {
+            if (!cameraControl.CameraCreated)
+                return;
+
             cameraControl.MixerEnabled = !cameraControl.MixerEnabled;
         }
         
