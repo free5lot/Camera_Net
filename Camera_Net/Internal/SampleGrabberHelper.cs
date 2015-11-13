@@ -355,7 +355,7 @@ namespace Camera_NET
                 m_bWantOneFrame = true;
 
                 // Start waiting
-                if (!m_PictureReady.WaitOne(5000, false))
+                if (!m_PictureReady.WaitOne(1000, false))
                 {
                     throw new Exception("Timeout while waiting to get a snapshot");
                 }
