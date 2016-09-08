@@ -5,9 +5,9 @@ CameraControlSample - is a simple sample of CameraControl usage
 Copyright (C) 2013
 https://github.com/free5lot/Camera_Net
 
-While the Camera_Net library is covered by LGPL, 
+While the Camera_Net library is covered by LGPL,
 this sample is released as PUBLIC DOMAIN.
-So, you can use code from this sample in your 
+So, you can use code from this sample in your
 free or proprietary project without any limitations.
 
 It is distributed in the hope that it will be useful,
@@ -15,24 +15,17 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 */
 
-#endregion
+#endregion License of Sample
 
 namespace CameraControlSample
 {
     #region Using directives
 
+    using Camera_NET;
     using System;
     using System.Windows.Forms;
-    using System.Drawing;
-    using System.Drawing.Imaging;
-    using System.Drawing.Drawing2D;
-    using System.Drawing.Text;
-    using System.Runtime.InteropServices.ComTypes;
 
-    using Camera_NET;
-    using DirectShowLib;
-
-    #endregion
+    #endregion Using directives
 
     // FormCameraControlSample
     public partial class FormCameraControlSample : Form
@@ -42,18 +35,18 @@ namespace CameraControlSample
         // Camera object
         //private Camera _Camera;
 
-        // Camera choice
-        private CameraChoice _CameraChoice = new CameraChoice();
-
-        #endregion
-
-        #region Winforms stuff
-
         // Constructor
         public FormCameraControlSample()
         {
             InitializeComponent();
         }
+
+        // Camera choice
+        private readonly CameraChoice _cameraChoice = new CameraChoice();
+
+        #endregion Variables
+
+        #region Winforms stuff
 
         // On load of Form
         private void FormCameraControlSample_Load(object sender, EventArgs e)
@@ -78,7 +71,7 @@ namespace CameraControlSample
             cameraControl.CloseCamera();
         }
 
-        #endregion
+        #endregion Winforms stuff
 
         #region Camera and resolution selection
 
@@ -86,9 +79,9 @@ namespace CameraControlSample
         {
             comboBoxCameraList.Items.Clear();
 
-            _CameraChoice.UpdateDeviceList();
+            _cameraChoice.UpdateDeviceList();
 
-            foreach (var camera_device in _CameraChoice.Devices)
+            foreach (var camera_device in _cameraChoice.Devices)
             {
                 comboBoxCameraList.Items.Add(camera_device.Name);
             }
@@ -134,7 +127,8 @@ namespace CameraControlSample
             else
             {
                 // Set camera
-                cameraControl.SetCamera(_CameraChoice.Devices[comboBoxCameraList.SelectedIndex].Mon, null);
+                //_CameraChoice.UpdateDeviceList();
+                cameraControl.SetCamera(_cameraChoice.Devices[comboBoxCameraList.SelectedIndex].Mon, null);
                 //SetCamera(_CameraChoice.Devices[ comboBoxCameraList.SelectedIndex ].Mon, null);
             }
 
@@ -153,10 +147,10 @@ namespace CameraControlSample
             }
             ResolutionList resolutions = Camera.GetResolutionList(cameraControl.Moniker);
 
-            if ( resolutions == null )
-                return; 
+            if (resolutions == null)
+                return;
 
-            if ( comboBoxResolutionIndex >= resolutions.Count )
+            if (comboBoxResolutionIndex >= resolutions.Count)
                 return; // throw
 
             if (0 == resolutions[comboBoxResolutionIndex].CompareTo(cameraControl.Resolution))
@@ -168,10 +162,8 @@ namespace CameraControlSample
             // Recreate camera
             //SetCamera(_Camera.Moniker, resolutions[comboBoxResolutionIndex]);
             cameraControl.SetCamera(cameraControl.Moniker, resolutions[comboBoxResolutionIndex]);
-
         }
 
-        #endregion
-
+        #endregion Camera and resolution selection
     }
 }
