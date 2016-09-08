@@ -690,7 +690,7 @@ namespace Camera_NET
                 // -------------------------------------------------------
 
             }
-            catch
+            catch(Exception exception)
             {
                 CloseAll();
                 throw;

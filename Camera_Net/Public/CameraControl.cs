@@ -58,6 +58,10 @@ namespace Camera_NET
         public CameraControl()
         {
             InitializeComponent();
+            
+            // Added in case the user keeps shrinking the window as the video dimensions 
+            // will reach 0 and an exception will be thrown
+            this.MinimumSize = new Size(1,1);
         }
 
         /// <summary>
