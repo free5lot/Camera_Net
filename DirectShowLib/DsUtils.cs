@@ -86,28 +86,45 @@ namespace DirectShowLib
     [StructLayout(LayoutKind.Explicit)]
     public struct DDPixelFormat
     {
-        [FieldOffset(0)] public int dwSize;
-        [FieldOffset(4)] public int dwFlags;
-        [FieldOffset(8)] public int dwFourCC;
+        [FieldOffset(0)]
+        public int dwSize;
+        [FieldOffset(4)]
+        public int dwFlags;
+        [FieldOffset(8)]
+        public int dwFourCC;
 
-        [FieldOffset(12)] public int dwRGBBitCount;
-        [FieldOffset(12)] public int dwYUVBitCount;
-        [FieldOffset(12)] public int dwZBufferBitDepth;
-        [FieldOffset(12)] public int dwAlphaBitDepth;
+        [FieldOffset(12)]
+        public int dwRGBBitCount;
+        [FieldOffset(12)]
+        public int dwYUVBitCount;
+        [FieldOffset(12)]
+        public int dwZBufferBitDepth;
+        [FieldOffset(12)]
+        public int dwAlphaBitDepth;
 
-        [FieldOffset(16)] public int dwRBitMask;
-        [FieldOffset(16)] public int dwYBitMask;
+        [FieldOffset(16)]
+        public int dwRBitMask;
+        [FieldOffset(16)]
+        public int dwYBitMask;
 
-        [FieldOffset(20)] public int dwGBitMask;
-        [FieldOffset(20)] public int dwUBitMask;
+        [FieldOffset(20)]
+        public int dwGBitMask;
+        [FieldOffset(20)]
+        public int dwUBitMask;
 
-        [FieldOffset(24)] public int dwBBitMask;
-        [FieldOffset(24)] public int dwVBitMask;
+        [FieldOffset(24)]
+        public int dwBBitMask;
+        [FieldOffset(24)]
+        public int dwVBitMask;
 
-        [FieldOffset(28)] public int dwRGBAlphaBitMask;
-        [FieldOffset(28)] public int dwYUVAlphaBitMask;
-        [FieldOffset(28)] public int dwRGBZBitMask;
-        [FieldOffset(28)] public int dwYUVZBitMask;
+        [FieldOffset(28)]
+        public int dwRGBAlphaBitMask;
+        [FieldOffset(28)]
+        public int dwYUVAlphaBitMask;
+        [FieldOffset(28)]
+        public int dwRGBZBitMask;
+        [FieldOffset(28)]
+        public int dwYUVZBitMask;
     }
 
     /// <summary>
@@ -1165,6 +1182,12 @@ namespace DirectShowLib
                     // Remove our entry
                     rot.Revoke(m_cookie);
                     m_cookie = 0;
+                }
+                catch
+                {
+                    // TODO : is this a serious error? 
+                    // this was added because it threw an exception if I hit the close button on the window
+                    // in the WPF application
                 }
                 finally
                 {
