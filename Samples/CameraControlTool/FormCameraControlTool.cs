@@ -635,10 +635,10 @@ namespace CameraControlTool
             }
             ResolutionList resolutions = Camera.GetResolutionList(cameraControl.Moniker);
 
-            if ( resolutions == null )
+            if (resolutions == null)
                 return; 
 
-            if ( comboBoxResolutionIndex >= resolutions.Count )
+            if (comboBoxResolutionIndex >= resolutions.Count)
                 return; // throw
 
             if (0 == resolutions[comboBoxResolutionIndex].CompareTo(cameraControl.Resolution))

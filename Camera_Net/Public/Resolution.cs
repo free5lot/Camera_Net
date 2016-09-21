@@ -65,7 +65,7 @@ namespace Camera_NET
         {
             Resolution x = this;
 
-            if ( x == null)
+            if (x == null)
             {
                 if (y == null)
                     return 0; // If x is null and y is null, they're equal. 

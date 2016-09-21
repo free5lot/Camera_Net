@@ -213,7 +213,7 @@ namespace Camera_NET
 
             string caption = string.Empty;
 
-            if ( filter_or_pin is IBaseFilter )
+            if (filter_or_pin is IBaseFilter)
             {
                 //Get the name of the filter from the FilterInfo struct
                 IBaseFilter as_filter = filter_or_pin as IBaseFilter;
@@ -229,7 +229,7 @@ namespace Camera_NET
                 }
             }
             else
-            if ( filter_or_pin is IPin )
+            if (filter_or_pin is IPin)
             {
                 //Get the name of the filter from the FilterInfo struct
                 IPin as_pin = filter_or_pin as IPin;
@@ -539,10 +539,10 @@ namespace Camera_NET
         /// <seealso cref="Moniker"/>
         public void Initialize(Control hControl, IMoniker moniker)
         {
-            if ( hControl == null )
+            if (hControl == null)
                 throw new Exception(@"Hosting control should be set.");
 
-            if ( moniker == null )
+            if (moniker == null)
                 throw new Exception(@"Camera's moniker should be set.");
 
             _Moniker = moniker;
@@ -1173,7 +1173,7 @@ namespace Camera_NET
                 {
                     // Found nothing exactly as we were asked 
 
-                    if ( media_type_most_appropriate != null)
+                    if (media_type_most_appropriate != null)
                     {
                         // set appropriate RGB format with different resolution
                         hr = videoStreamConfig.SetFormat(media_type_most_appropriate);
@@ -1695,7 +1695,7 @@ namespace Camera_NET
             UpdateOutputVideoSize();
 
             // Call event handlers (External)
-            if ( OutputVideoSizeChanged != null )
+            if (OutputVideoSizeChanged != null)
             {
                 OutputVideoSizeChanged(sender, e);
             }

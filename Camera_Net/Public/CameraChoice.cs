@@ -150,7 +150,7 @@ namespace Camera_NET
                     return -1;
 
                     //// select default camera
-                    //if ( m_pCapDevices && m_pCapDevices.Count >= 1 )
+                    //if (m_pCapDevices && m_pCapDevices.Count >= 1)
                     //{
                     //	cam_index = 0;
                     //}

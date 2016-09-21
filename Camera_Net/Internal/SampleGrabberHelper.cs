@@ -379,7 +379,7 @@ namespace Camera_NET
         /// <returns>A pointer to the raw pixel data</returns>
         private IntPtr GetCurrentFrame()
         {
-            if ( ! m_bBufferSamplesOfCurrentFrame )
+            if (!m_bBufferSamplesOfCurrentFrame)
                 throw new Exception("SampleGrabberHelper was created without buffering-mode (buffer of current frame)");
 
             int hr = 0;

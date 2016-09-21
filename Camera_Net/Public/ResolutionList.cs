@@ -46,7 +46,7 @@ namespace Camera_NET
         /// <returns>True if was added, False otherwise</returns>
         public bool AddIfNew(Resolution item)
         {
-            if ( this.Contains(item) )
+            if (this.Contains(item))
                 return false;
 
             this.Add(item);
