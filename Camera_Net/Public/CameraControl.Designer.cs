@@ -32,10 +32,12 @@
             // 
             // CameraControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(1, 1);
             this.Name = "CameraControl";
-            this.Size = new System.Drawing.Size(297, 243);
+            this.Size = new System.Drawing.Size(396, 299);
             this.ResumeLayout(false);
 
         }
