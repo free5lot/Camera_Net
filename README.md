@@ -14,6 +14,7 @@ _**NOTE: There is an [article on CodeProject.com about Camera Net library](http:
 6. Change TV mode (PAL, NTSC, etc.)
 7. Display dialog windows of the camera (from drivers)
 8. Get a list of available cameras and resolutions
+9. Support WinForms and WPF applications
 
 ![Complicated sample of Camera_Net library use. Stranger on television.](https://raw.github.com/free5lot/Camera_Net/master/screenshots/CameraControlTool_sample_screenshot.png "Complicated sample of Camera_Net library use. Stranger on television.")
 
