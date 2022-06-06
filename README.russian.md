@@ -25,7 +25,7 @@ Camera – объект для работы с камерами.
 Кроме этого, есть несколько вспомогательных public классов: Resolution, VideoInput, классы выбора камеры и др.
 Библиотека использует DirectShowLib (лицензия LGPL 2.1 или новее), которая является очень тонким враппером COM-интерфейсов DirectX, благодаря чему потери производительности от использования управляемого кода вместо нативного минимальны.
 
-DirectShow есть только в MS Windows, соответственно и библиотека доступна только для Windows.
+DirectShow есть только под Windows, соответственно и библиотека доступна только для Windows.
 
 ### Лицензия
 ##### Лицензия библиотеки Camera_NET
@@ -34,13 +34,12 @@ DirectShow есть только в MS Windows, соответственно и 
 ##### Лицензия примеров
 Хотя сама библиотека Camera_NET и распространяется под лицензией LGPL, код примеров публикуется как ОБЩЕСТВЕННОЕ ДОСТОЯНИЕ. То есть вы можете использовать код из примеров в своих свободных и проприетарных проектах без каких либо ограничений.
 
-### Ссылки на другие свободные проекты по теме:
-- [DirectShow.NET –  CodeProject](http://www.codeproject.com/Articles/2615/DirectShow-NET)
-- [DirectX.Capture Class Library –  CodeProject](http://www.codeproject.com/Articles/3566/DirectX-Capture-Class-Library)
-- [Aforge.NET –  Computer Vision, Artificial Intelligence, Robotics](http://www.aforgenet.com/)
-- [Touchless SDK  –  Codeplex](https://touchless.codeplex.com/releases/view/17986)
-- [Emgu CV: OpenCV in .NET](http://www.emgu.com/wiki/index.php/Main_Page)
-- [OpenCV | OpenCV](http://opencv.org/)
-- [Image Processing Lab in C# –  CodeProject](http://www.codeproject.com/Articles/9727/Image-Processing-Lab-in-C)
-- [Versatile WebCam C# library –  CodeProject](http://www.codeproject.com/Articles/125478/Versatile-WebCam-C-library)
-- [Camera Vision (video surveillance on C#) –  CodeProject](http://www.codeproject.com/Articles/15537/Camera-Vision-video-surveillance-on-C)
+### Ссылки на некоторые свободные проекты по данной теме:
+- [DirectShow.NET Library (DirectShowLib)](https://sourceforge.net/projects/directshownet/)
+- [GraphStudioNext](https://github.com/cplussharp/graph-studio-next)
+- [DirectX.Capture Class Library –  CodeProject](https://www.codeproject.com/Articles/3566/DirectX-Capture-Class-Library)
+- [Emgu CV: OpenCV in .NET](https://www.emgu.com/wiki/index.php/Main_Page)
+- [OpenCV | OpenCV](https://opencv.org/)
+- [Image Processing Lab in C# –  CodeProject](https://www.codeproject.com/Articles/9727/Image-Processing-Lab-in-C)
+- [Versatile WebCam C# library –  CodeProject](https://www.codeproject.com/Articles/125478/Versatile-WebCam-C-library)
+- [Camera Vision (video surveillance on C#) –  CodeProject](https://www.codeproject.com/Articles/15537/Camera-Vision-video-surveillance-on-C)

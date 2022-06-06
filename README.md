@@ -19,17 +19,17 @@ _**NOTE: There is an [article on CodeProject.com about Camera Net library](http:
 ![Complicated sample of Camera_Net library use. Stranger on television.](https://raw.github.com/free5lot/Camera_Net/master/screenshots/CameraControlTool_sample_screenshot.png "Complicated sample of Camera_Net library use. Stranger on television.")
 
 ### About the library
-The library was created because I've failed to find a library among dozens of open source solutions that would support what I wanted: easy use of camera as a component, ability to change the camera resolution, take frame snapshots, show overlay images over the frame.
+The library was created because I've failed to find a library among dozens of free/libre and open source solutions that would support what I wanted: easy way to use camera as a component, ability to change the camera resolution, take frame snapshots, show overlay images over the frame.
 
 The main classes in the library are CameraControl and Camera.
-CameraControl is a UserControl-wrapper for Camera class, easy to use out of box. This approach is recommended.
+CameraControl is a UserControl-wrapper for Camera class, easy to use out of box. This UserControl-approach is recommended.
 The library includes two samples of use in WinForms, in particular an example of a simple implementation of the component in your application, and more complicated example that shows almost all features of the library. 
 Camera is an object for interaction with cameras.
 
 Additionally there are several public classes: Resolution, VideoInput, camera selection class and etc. 
 The library uses DirectShowLib (license LGPL 2.1 or later), which is a very thin wrapper of DirectX COM-interfaces, so that the losses of productivity from the use of managed code instead of the native one are minimal.
 
-DirectShow is MS Windows only, so the library is also available only for Windows.
+DirectShow is a Windows-only thing, so the library is also available only for Windows.
 
 ### License
 ##### Camera_NET license
@@ -41,13 +41,12 @@ So, you can use code from these samples in your  free or proprietary project wit
 
 ![Simple sample of Camera_Net library use.](https://raw.github.com/free5lot/Camera_Net/master/screenshots/Simple_sample_screenshot.png "Simple sample of Camera_Net library use.")
 
-### Links to related open source projects:
-- [DirectShow.NET –  CodeProject](http://www.codeproject.com/Articles/2615/DirectShow-NET)
-- [DirectX.Capture Class Library –  CodeProject](http://www.codeproject.com/Articles/3566/DirectX-Capture-Class-Library)
-- [Aforge.NET –  Computer Vision, Artificial Intelligence, Robotics](http://www.aforgenet.com/)
-- [Touchless SDK  –  Codeplex](https://touchless.codeplex.com/releases/view/17986)
-- [Emgu CV: OpenCV in .NET](http://www.emgu.com/wiki/index.php/Main_Page)
-- [OpenCV | OpenCV](http://opencv.org/)
-- [Image Processing Lab in C# –  CodeProject](http://www.codeproject.com/Articles/9727/Image-Processing-Lab-in-C)
-- [Versatile WebCam C# library –  CodeProject](http://www.codeproject.com/Articles/125478/Versatile-WebCam-C-library)
-- [Camera Vision (video surveillance on C#) –  CodeProject](http://www.codeproject.com/Articles/15537/Camera-Vision-video-surveillance-on-C)
+### Links to some related open source projects:
+- [DirectShow.NET Library (DirectShowLib)](https://sourceforge.net/projects/directshownet/)
+- [GraphStudioNext](https://github.com/cplussharp/graph-studio-next)
+- [DirectX.Capture Class Library –  CodeProject](https://www.codeproject.com/Articles/3566/DirectX-Capture-Class-Library)
+- [Emgu CV: OpenCV in .NET](https://www.emgu.com/wiki/index.php/Main_Page)
+- [OpenCV | OpenCV](https://opencv.org/)
+- [Image Processing Lab in C# –  CodeProject](https://www.codeproject.com/Articles/9727/Image-Processing-Lab-in-C)
+- [Versatile WebCam C# library –  CodeProject](https://www.codeproject.com/Articles/125478/Versatile-WebCam-C-library)
+- [Camera Vision (video surveillance on C#) –  CodeProject](https://www.codeproject.com/Articles/15537/Camera-Vision-video-surveillance-on-C)
